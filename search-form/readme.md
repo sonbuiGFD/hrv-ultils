@@ -7,21 +7,12 @@
 **add custom tag for plugin**
 
 ```sh
-<div data-search-form class="block_content">
+<div data-search-form >
     <input class="form-control" search-form-input />
     <ul>
         {% for vendor in shop.vendors %}
-            <li  search-form-item data-key="{{ vendor }}">
-                <input
-                        id="filer-vendor-{{ forloop.index }}"
-                        type="checkbox"
-                        name="filer-vendor-{{ forloop.index }}"
-                        value="(vendor:product**{{vendor}})"
-                        filter-option
-                        data-label="{{ vendor }}"
-                        data-id="filer-vendor-{{ forloop.index }}"
-                    >
-                <label for="filer-vendor-{{ forloop.index }}">{{ vendor }}</label>
+            <li search-form-item data-key="{{ vendor }}">
+               { vendor }}
             </li>
         {% endfor %}
     </ul>
